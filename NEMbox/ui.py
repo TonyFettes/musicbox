@@ -179,7 +179,7 @@ class Ui(object):
 
     def update_lyrics(self, now_playing, lyrics, tlyrics):
 
-        timestap_regex = r"\d\d:\d\d\.[0-9]*"
+        timestap_regex = r"[0-9]*:[0-9]*\.[0-9]*"
 
         def get_timestap(lyric_line):
             match_ret = re.match(r"\[(" + timestap_regex + r")\]", lyric_line)
@@ -682,10 +682,10 @@ class Ui(object):
                     )
 
             self.addstr(
-                20, self.startcol, "NetEase-MusicBox 基于Python，所有版权音乐来源于网易，本地不做任何保存"
+                10 + step, self.startcol, "NetEase-MusicBox 基于Python，所有版权音乐来源于网易，本地不做任何保存"
             )
-            self.addstr(21, self.startcol, "按 [G] 到 Github 了解更多信息，帮助改进，或者Star表示支持~~")
-            self.addstr(22, self.startcol, "Build with love to music by omi")
+            self.addstr(11 + step, self.startcol, "按 [G] 到 Github 了解更多信息，帮助改进，或者Star表示支持~~")
+            self.addstr(12 + step, self.startcol, "Build with love to music by omi")
 
         self.screen.refresh()
 
