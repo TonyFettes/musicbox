@@ -35,6 +35,7 @@ fuzzywuzzy = "^0.18.0"
 pycryptodomex = "^3.9.8"
 python-Levenshtein = "^0.12.0"
 toml = "^0.10.1"
+dbus = "^1.2.16"
 
 [tool.poetry.dev-dependencies]
 mypy = "^0.782"

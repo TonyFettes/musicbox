@@ -137,7 +137,7 @@ class Menu(object):
         self.ui = Ui()
         self.api = NetEase()
         self.screen = C.initscr()
-        self.screen.keypad(1)
+        self.screen.keypad(True)
         self.step = Config().get("page_length")
         if self.step == 0:
             self.step = max(int(self.ui.y * 4 / 5) - 10, 1)
@@ -565,6 +565,7 @@ class Menu(object):
         self.player.stop()
         self.cache.quit()
         self.storage.save()
+        self.config.save_config_file()
         C.endwin()
 
     def start(self):
